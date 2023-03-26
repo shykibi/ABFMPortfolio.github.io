@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Montserrat:wght@200&family=VT323&display=swap');
+
+
+/*           computer                */
+#pcSection{
+  z-index: 2;
+  position: relative;
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: left;
+  
+  color: white;
+  background-color: black;
+  font-family: 'VT323', monospace;
+  font-size: xx-large;
+  
+}
+
+#pcSectionSelectionMenu{
+  display: none;
+  
+}
+
+#pcSectionItem{
+  display: none;
+}
+
+.pcSectionText{
+  padding: 4rem;
+}
+
+.pcSectionImage{
+  float: left;
+  padding-right: 5%;
+  max-width: 450px; 
+  max-height: 450px;
+}
+
+.progamName{
+  background-color: white;
+  color: black;
+}
+
+/* Solid border */
+hr.solid {
+  border-top: 15px solid white;
+  opacity: 1;
+}
+
+.pcButton{
+  padding-left: 4rem;
+  padding-right: 4rem;
+  background-color: black;
+  color: white;
+}
+
+.pcButton:hover {
+  background-color: blue;
+}

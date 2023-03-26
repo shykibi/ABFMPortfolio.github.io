@@ -1,0 +1,328 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Montserrat:wght@200&family=VT323&display=swap');
+
+*{
+    margin:0;   /* to avoid blank space */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* rendered scene content*/
+.webgl {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+/* web page content*/
+.page {
+    position: relative;
+    z-index: 2;
+}
+
+.pageTitle{
+    color: aliceblue;
+    z-index: 2;
+    position: relative;
+    padding: 1.5rem 8rem;
+    font-family: 'Comfortaa', sans-serif;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.navbarOption {  
+  display: inline-block;
+  color: white;  
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* agregamos la propiedad de transición para el color */
+}
+
+.navbarOption:hover {
+  transform: scale(1.1);
+  color: #000000; /* Cambia el color del enlace al pasar el cursor sobre él */
+}
+
+.navbarOption__bar {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 5px;  
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.navbarOption--yellow:hover .navbarOption__bar {
+  transform: scaleX(1);
+  background-color: #f3ff69;
+}
+
+.navbarOption--blue:hover .navbarOption__bar {
+  transform: scaleX(1);
+  background-color: #6495ED;
+}
+
+.navbarOption--green:hover .navbarOption__bar {
+  transform: scaleX(1);
+  background-color: #66ed64;
+}
+
+.navbarOption--purple:hover .navbarOption__bar {
+  transform: scaleX(1);
+  background-color: #ed6472;
+}
+
+.navbarOption--black:hover .navbarOption__bar {
+  transform: scaleX(1);
+  background-color: #242424;
+  right: 0;
+}
+
+
+section{
+    z-index: 2;
+    position: relative;
+    padding: 4rem 8rem;
+    justify-content: left;
+    display: none;
+}
+
+footer {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f2f2f22d;
+  backdrop-filter: blur(10px);
+  color: #4c4c4c;
+  font-weight: bold;
+  padding: 5px;
+  font-family: 'Comfortaa';
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  margin: 0 40px;
+}
+
+footer a {
+  margin: 0 40px;
+}
+
+
+/* ul {
+  overflow-y: scroll;
+} */
+
+/* Personaliza la barra de desplazamiento */
+/*
+ul::-webkit-scrollbar {
+  width: 0; 
+  background: transparent; 
+}*/
+
+
+/* tool tips*/
+.tooltip{
+  background-color: black;
+  color: white;
+  padding: 10px;
+  position: relative;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition-duration: 0.1s;
+  transition-property: opacity, transform;
+}
+
+.tooltip::after{
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  top: 90%;
+  left: 50%;
+  transform: rotateZ(45deg) translateX(-50%);
+  z-index: -1;
+}
+
+.hide {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+
+/*  ANIMATIONS */
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  @-webkit-keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+      display: flex;
+    }
+    }   
+
+    @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+        }
+        100% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+          display: flex;
+        }
+    }
+
+
+.fadeOutDown {
+    -webkit-animation-name: fadeOutDown;
+    animation-name: fadeOutDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+  
+  @-webkit-keyframes fadeOutDown {
+    0% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+      display: flex;
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+  
+  @keyframes fadeOutDown {
+    0% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+      display: flex;
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+
+
+
+
+
+
+
+  .preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at center, rgb(152, 253, 236), rgb(152, 171, 253));
+    z-index: 9999;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+  }
+  
+  .preloader.fade-out {
+    opacity: 0;
+  }
+  
+  .preloader__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .loading-text {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Dot pulse animation */
+  .dot-pulse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dot-pulse div {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: #a548df;
+    animation: pulse 1s ease-in-out infinite;
+  }
+  
+  .dot-pulse div:nth-child(1) {
+    animation-delay: -0.2s;
+  }
+  
+  .dot-pulse div:nth-child(2) {
+    animation-delay: -0.1s;
+  }
+  
+  .dot-pulse div:nth-child(3) {
+    animation-delay: 0s;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+
+  
