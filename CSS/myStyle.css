@@ -1,16 +1,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Montserrat:wght@200&family=VT323&display=swap');
 
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+
 *{
-    margin:0;   /* to avoid blank space */
+    margin:0; 
     padding: 0;
     box-sizing: border-box;
 }
 
+/* General structure */
 html, body{
     font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
 }
+
 
 /* rendered scene content*/
 .webgl {
@@ -21,11 +29,11 @@ html, body{
 }
 
 /* web page content*/
-.page {
-    position: relative;
-    z-index: 2;
+/* images */
+img{
+  width: 100%;
 }
-
+/* navbar/title */
 .pageTitle{
     color: aliceblue;
     z-index: 2;
@@ -36,6 +44,7 @@ html, body{
     justify-content: space-between; */
 }
 
+
 .navbarOption {  
   display: inline-block;
   color: white;  
@@ -45,7 +54,7 @@ html, body{
 
 .navbarOption:hover {
   transform: scale(1.1);
-  color: #000000; /* Cambia el color del enlace al pasar el cursor sobre él */
+  color: #787878; /* Cambia el color del enlace al pasar el cursor sobre él */
 }
 
 .navbarOption__bar {
@@ -85,7 +94,7 @@ html, body{
   right: 0;
 }
 
-
+/* content */
 section{
     z-index: 2;
     position: relative;
@@ -94,6 +103,7 @@ section{
     display: none;
 }
 
+/* footer */
 footer {
   z-index: 2;
   position: absolute;
@@ -119,17 +129,6 @@ footer a {
   margin: 0 40px;
 }
 
-
-/* ul {
-  overflow-y: scroll;
-} */
-
-/* Personaliza la barra de desplazamiento */
-/*
-ul::-webkit-scrollbar {
-  width: 0; 
-  background: transparent; 
-}*/
 
 
 /* tool tips*/
@@ -276,7 +275,7 @@ ul::-webkit-scrollbar {
   
   .loading-text {
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 2vw;
     font-weight: bold;
     color: #333;
   }

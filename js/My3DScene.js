@@ -338,11 +338,11 @@ export default class My3DScene {
         this.careerMenuOpen = true;        
 
         const objectClicked = this.mainModels.models['pcDisplay002'];    
-        this.htmlInteraction.showData(objectClicked, this.cameraInitPos);
+        this.htmlInteraction.showData(objectClicked, this.cameraInitPos, () => {
+            var selectionMenu = document.querySelector('#pcSectionSelectionMenu');
+            selectionMenu.style.display = 'block';
+        });
         this.htmlInteraction.hideElements();
-
-        var selectionMenu = document.querySelector('#pcSectionSelectionMenu');
-        selectionMenu.style.display = 'block';
         
     }
     closeMenuCareer(){         
@@ -365,11 +365,11 @@ export default class My3DScene {
         this.masterMenuOpen = true;
         
         const objectClicked = this.mainModels.models['gbc001'];  
-        this.htmlInteraction.showData(objectClicked, this.cameraInitPos);
+        this.htmlInteraction.showData(objectClicked, this.cameraInitPos, () => {
+            var selectionMenu = document.querySelector('#masterSection');
+            selectionMenu.style.display = 'block';
+        });
         this.htmlInteraction.hideElements();
-
-        var selectionMenu = document.querySelector('#masterSection');
-        selectionMenu.style.display = 'block';
 
         this.openSectionMenuMasterVideogames();
     }

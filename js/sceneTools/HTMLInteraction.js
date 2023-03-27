@@ -37,11 +37,11 @@ export default class HTMLInteraction{
 
     }
 
-    showData(objectClicked, cameraInitPos){         
+    showData(objectClicked, cameraInitPos, callback){         
             
         this.my3DScene.mainModels.animateSelectedModel(objectClicked);
         this.my3DScene.mainAudio.playOneShot(this.my3DScene.clickSound);
-        this.my3DScene.cameraControls.pushCameraTo(objectClicked, true, cameraInitPos);
+        this.my3DScene.cameraControls.pushCameraTo(objectClicked, true, cameraInitPos, callback);
         
     }
 

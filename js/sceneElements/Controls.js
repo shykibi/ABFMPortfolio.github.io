@@ -28,7 +28,7 @@ export default class Controls{
 
     }
 
-    animateCamera(isReset){
+    animateCamera(isReset, callback){
         
         // Crear la animación con Tween.js
         const tween = new TWEEN.Tween({ t: 0 })
@@ -39,19 +39,27 @@ export default class Controls{
             // this.camera.lookAt(this.endPoint.x, this.endPoint.y, this.endPoint.z); // Hacer que la cámara mire hacia el punto de destino
             })
             .onComplete(() => {
+
                 if(isReset){
+
                     this.my3DScene.oneMenuOpen = false;    
                     this.my3DScene.cvMenuOpen = false;
                     this.my3DScene.expMenuOpen = false;   
                     this.my3DScene.careerMenuOpen = false;        
                     this.my3DScene.masterMenuOpen = false;        
+                }else{
+
+                    if (typeof callback === 'function') {
+
+                        callback();
+                    }
                 }
 
               }).start();
 
     }
 
-    pushCameraTo(objectClicked, isMesh, cameraInitPos){
+    pushCameraTo(objectClicked, isMesh, cameraInitPos, callback){
 
         const cameraActualPos = this.camera.position.clone();
     
@@ -75,7 +83,7 @@ export default class Controls{
     
         // create path and animate camera
         this.setPath(cameraActualPos, sum);
-        this.animateCamera(false); 
+        this.animateCamera(false, callback); 
         this.orbitControls.target.set(toWorldPos.x, toWorldPos.y, toWorldPos.z);
         this.orbitControls.update();
 

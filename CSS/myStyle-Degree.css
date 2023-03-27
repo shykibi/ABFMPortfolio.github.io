@@ -8,34 +8,46 @@
   position: relative;
   margin-left: 5%;
   margin-right: 5%;
-  justify-content: left;
+  width: 100%;
+  height: 50%;
   
   color: white;
   background-color: black;
   font-family: 'VT323', monospace;
-  font-size: xx-large;
+  font-size:2vw;
   
 }
 
 #pcSectionSelectionMenu{
   display: none;
-  
+  width: 100%; 
+  height: 100%;  
 }
 
 #pcSectionItem{
   display: none;
+  width: 100%; 
+  height: 100%;
 }
 
 .pcSectionText{
-  padding: 4rem;
+  padding: 2%;
+  width: 100%; 
+  height: 100%;
 }
 
-.pcSectionImage{
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+  
+  .pcSectionImage{
   float: left;
-  padding-right: 5%;
-  max-width: 450px; 
-  max-height: 450px;
-}
+  padding-right: 2%;
+  max-width: 25%;
+  max-height: 25%;
+  }
 
 .progamName{
   background-color: white;

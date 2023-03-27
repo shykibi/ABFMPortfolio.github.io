@@ -38,6 +38,8 @@ export default class PortfolioData{
             }
         ];
         
+        const thisMasterVideogamesData = this.masterVideogamesData;
+
         this.masterVRData = [
             {
                 img:'./imgs/vrMuseum.png',
@@ -58,6 +60,7 @@ export default class PortfolioData{
                 smallText: 'GI, Games and VR master'
             }
         ];
+        const thisMasterVRData = this.masterVRData;
 
         this.masterCGData = [
             {
@@ -80,6 +83,7 @@ export default class PortfolioData{
             }
         ];
         
+        const thisMasterCGData = this.masterCGData;
 
         this.careerData = [
             {
@@ -107,6 +111,7 @@ export default class PortfolioData{
                 smallText: 'Post studies'
             }
         ];
+        const thisCareerData = this.careerData;
 
         const my3DScene = new My3DScene();
         this.loadData();
@@ -140,7 +145,7 @@ export default class PortfolioData{
         button.addEventListener('click', () => {
             openSectionMenuCareer();
             // Obtener la información del objeto careerData correspondiente al botón clicado
-            const { img, title, description, smallText } = this.careerData[index];
+            const { img, title, description, smallText } = thisCareerData[index];
 
             // Actualizar el contenido de pcSectionItem con la información correspondiente
             pcSectionItem.querySelector('.progamName').textContent = title;
@@ -187,13 +192,13 @@ export default class PortfolioData{
             if (currentVRIndex > 0) {
                 currentVRIndex--;        
             }else{
-                currentVRIndex = this.masterVRData.length - 1;
+                currentVRIndex = thisMasterVRData.length - 1;
             }
             updateVRVisor();
         });
 
         nextButton.addEventListener('click', () => {
-            if (currentVRIndex < this.masterVRData.length - 1) {
+            if (currentVRIndex < thisMasterVRData.length - 1) {
                 currentVRIndex++;
             }else{
                 currentVRIndex = 0;
@@ -202,7 +207,7 @@ export default class PortfolioData{
         });
 
         function updateVRVisor() {
-        const currentVR = this.masterVRData[currentVRIndex];
+        const currentVR = thisMasterVRData[currentVRIndex];
         vrVisorLeft.style.backgroundImage = `url(${currentVR.img})`;
         vrVisorRight.querySelector('.vrTitle').textContent = currentVR.title;
         vrVisorRight.querySelector('.vrDescription').textContent = currentVR.description;
@@ -220,13 +225,13 @@ export default class PortfolioData{
             if (cgCurrentIndex > 0) {
                 cgCurrentIndex--;        
             }else{
-                cgCurrentIndex = this.masterCGData.length - 1;
+                cgCurrentIndex = thisMasterCGData.length - 1;
             }
             updateCGContent();
         });
 
         cgNextButton.addEventListener('click', () => {
-            if (cgCurrentIndex < this.masterCGData.length - 1) {
+            if (cgCurrentIndex < thisMasterCGData.length - 1) {
                 cgCurrentIndex++;
             }else{
                 cgCurrentIndex = 0;
@@ -235,9 +240,9 @@ export default class PortfolioData{
         });
 
         function updateCGContent() {
-        const currentCG = this.masterCGData[cgCurrentIndex];
-        masterSectionGC.querySelector('.CGTitle').textContent = currentCG.title;
-        masterSectionGC.querySelector('.CGDescription').textContent = currentCG.description;  
+            const currentCG = thisMasterCGData[cgCurrentIndex];
+            masterSectionGC.querySelector('.CGTitle').textContent = currentCG.title;
+            masterSectionGC.querySelector('.CGDescription').textContent = currentCG.description;  
 
         }
 
@@ -267,8 +272,6 @@ export default class PortfolioData{
 
         ////////////////////////////////////
 
-
-
         const webPage = document.getElementById('htmlPage');
 
         // Manejador de evento para el clic del botón
@@ -276,13 +279,6 @@ export default class PortfolioData{
         event.stopPropagation();
         // Aquí puedes agregar tu lógica para hacer algo cuando se hace clic en el botón
         });
-
-
-
-
-
-
-
 
 
     }
@@ -333,7 +329,7 @@ export default class PortfolioData{
                                         ${section.title}
                                     </div>
                                     <div class="game">
-                                        <img src="${section.img}" class="card-img portfolioSectionImage pcSectionImage" alt="..." >
+                                        <img src="${section.img}" class="card-img " alt="..." >
                                         <div>
                                             ${section.description}
                                         </div>
@@ -460,7 +456,7 @@ export default class PortfolioData{
         let sectionHTML = `
         <div id="pcSectionItem">
             <div class="progamName">FlightBookingPage.exe</div>            
-            <div class="pcSectionText">
+            <div class="pcSectionText clearfix">
                 <img src="./imgs/flightBooking.png" class="card-img portfolioSectionImage pcSectionImage" alt="..." >
                 <p class="card-text">Web page consisting of a single HTML element that is dynamically updated with javaScript and uses an "H2" database. The HTML and JS elements were self-developed and Boostrap was used for styling along with a self-developed CSS file.</p>
                 <p class="card-text"><small class="text-muted">Computer Engineering degree</small></p>
