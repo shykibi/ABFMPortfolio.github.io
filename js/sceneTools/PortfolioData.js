@@ -15,6 +15,38 @@ export default class PortfolioData{
 
         this.masterVideogamesData = [
             {
+                img:'./imgs/genericAnimations.png',
+                title: 'Generic Animations',
+                description: 'Rig, skin and pose by pose animation of a model, in 3DMax, and export it to a scene in unity. First contact with Unity and 3DMax.\n'+
+                    '<button onclick="window.open(\'https://youtu.be/j-HpDx8_XDw\')">'+
+                       '<i class="fab fa-youtube"></i> Watch demo'+
+                    '</button>',
+                smallText: 'GI, Games and VR master'
+            },
+            {
+                img:'./imgs/humanoidAnimations.png',
+                title: 'Humanoid Animations',
+                description: 'Implement a scene in unity and animate a humanoid model with Mixamo.com animations and inverse kinematics animations. First contact with Unity.\n'+
+                    '<button onclick="window.open(\'https://youtu.be/0MuM3SRJmhY\')">'+
+                    '<i class="fab fa-youtube"></i> Watch demo'+
+                    '</button>',
+                smallText: 'GI, Games and VR master'
+            },
+            {
+                img:'./imgs/Runok.png',
+                title: 'Runok',
+                description: 'Group project in which a video game was developed. Runok is a 3D platform game where I worked on game mechanics, modeling, sound effects and music, and interface design. This was my first time developing a videogame.\n'+
+                        '<p>'+
+                            '<a href= "https://symplecticgames.itch.io/runok" target="_blank" class="link-info">'+
+                                'Try it!'+
+                            '</a>'+
+                        '</p>'+
+                    '<button onclick="window.open(\'https://www.youtube.com/watch?v=52VqOMPcKGc\')">'+
+                       '<i class="fab fa-youtube"></i> Watch trailer'+
+                    '</button>',
+                smallText: 'GI, Games and VR master'
+            },
+            {
                 img:'./imgs/Undeafeatable.png',
                 title: 'Undeafeatable',
                 description: 'Solo game developed for the master\'s thesis. Undeafeatable is an introductory video game to Spanish sign language through game mechanics and using a handtracking system. \n'+
@@ -22,19 +54,11 @@ export default class PortfolioData{
                             '<a href= "https://shykibi5.itch.io/undeafeatable?password=Undeafeatable" target="_blank" class="link-info">'+
                                 'Try it!'+
                             '</a>'+
-                        '</p>',
+                        '</p>'+
+                    '<button onclick="window.open(\'https://youtu.be/6GKEg8HbTn4\')">'+
+                       '<i class="fab fa-youtube"></i> Watch trailer'+
+                    '</button>',
                 smallText: 'GI,games and VR master'
-            },
-            {
-                img:'./imgs/Runok.png',
-                title: 'Runok',
-                description: 'Group project in which a video game was developed. Runok is a 3D platform game in which I developed some mechanics, modelled some elements, incorporated some sound effects and music, and made the interface. This was my first time developing a videogame.\n'+
-                        '<p>'+
-                            '<a href= "https://symplecticgames.itch.io/runok" target="_blank" class="link-info">'+
-                                'Try it!'+
-                            '</a>'+
-                        '</p>',
-                smallText: 'GI, Games and VR master'
             }
         ];
         
@@ -48,13 +72,13 @@ export default class PortfolioData{
                 smallText: 'GI, Games and VR master'
             },
             {
-                img:'./imgs/vrMuseum.png',
+                img:'./imgs/vrVisor.png',
                 title: 'Hand-made VR visor',
                 description: 'OpenCV project where you can move cubes in a scene and rotate the camera by using a QR image, simulating a VR viewer.',
                 smallText: 'GI, Games and VR master'
             },
             {
-                img:'./imgs/vrMuseum.png',
+                img:'./imgs/vrHaptic.png',
                 title: 'Haptic illusions',
                 description: 'Project to simulate the interaction with different surfaces using novint falcon.',
                 smallText: 'GI, Games and VR master'
@@ -64,21 +88,87 @@ export default class PortfolioData{
 
         this.masterCGData = [
             {
-                img:'./imgs/unityScene.png',
-                title: 'Unity Scene',
-                description: 'First contact with 3DMax and Unity where I\'d to rig, skin and animate (with pose to pose and IK animations) a humanoid model. In other scene i\'d to use a Mixamo\'s model and animate it in a original scene with IK animations integrated',
-                smallText: 'GI, Games and VR master'
-            },
-            {
-                img:'./imgs/computerAnimation.png',
+                img:'./imgs/morphing.gif',
                 title: 'Computer Animation',
                 description: 'Different proyects where I used the Computer Animation theory to: image morphing, IK animation.',
                 smallText: 'GI, Games and VR master'
             },
             {
-                img:'./imgs/StarWarsScene.png',
+                img:'./imgs/glslIntroduction.png',
+                title: 'GLSL Introduction',
+                description: 'First contact with GLSL where I\'d to modify a scene, using vertex and fragment shader.',
+                buttonGit:    {
+                    link:'https://github.com/GonzaloGNogales/3DGraphicsShaders',
+                    text: 'Visit repository'
+                },
+                smallText: 'GI, Games and VR master'
+            },
+            {
+                img:'./imgs/glslIlumination.png',
+                title: 'GLSL Ilumination',
+                description: 'Implemented different lighting in GLSL.',
+                buttonGit:    {
+                    link:'https://github.com/GonzaloGNogales/3DGraphicsIllumination',
+                    text: 'Visit repository'
+                },
+                smallText: 'GI, Games and VR master'
+            },
+            {
+                img:'./imgs/oglIntroduction.png',
+                title: 'OpenGL Programming',
+                description: 'Adjusted light properties, defined projection matrix, used multiple programs for scene cubes, controlled camera with keyboard, and applied anisotropic filter.',
+                buttonGit:    {
+                    link:'https://github.com/GonzaloGNogales/3DGraphicsOpenGL',
+                    text: 'Visit repository'
+                },
+                smallText: 'GI, Games and VR master'
+            },
+            {
+                img:'./imgs/oglPostProcessing.png',
+                title: 'Post-Processing (MRT)',
+                description: 'Implemented DOF control with depth buffer and convolution masks, concatenated Gaussian filters and post-processing techniques, and used Deferred Shading.',
+                buttonGit:    {
+                    link:'https://github.com/GonzaloGNogales/3DGraphicsDeferredShading',
+                    text: 'Visit repository'
+                },
+                smallText: 'GI, Games and VR master'
+            },
+            {
+                img:'./imgs/runokShaders.png',
+                title: 'Unity custom shader',
+                description: 'custom Water shader, outline + toon shader and tessellation shader with Unity.',
+                buttonGit:    {
+                    link:'https://github.com/GonzaloGNogales/ShadersDemoRunok',
+                    text: 'Visit repository'
+                },
+                smallText: 'GI, Games and VR master'
+            },
+            {
+                img:'./imgs/carrousel.png',
+                title: 'OpenGL Carrousel',
+                description: 'Developed an OpenGL scene with object and camera movement, as well as independent movements and rotations of the object\'s joints in a paired project.',
+                buttonYT:    {
+                    link:'https://youtube.com/shorts/m38SzcPZNOE?feature=share',
+                    text: 'Watch demo'
+                },
+                buttonGit:    {
+                    link:'https://github.com/shykibi/OpenGLCarousel_Tex-Anim',
+                    text: 'Visit repository'
+                },
+                smallText: 'Computer Engineering degree'
+            },
+            {
+                img:'./imgs/starwarsOGL.png',
                 title: 'Star Wars Scene',
-                description: 'Paired project in which a scene was developed in OpenGL with its animations, models, materials and textures and lighting system. This was the first time learning rendering basics.',
+                description: 'Created an OpenGL scene with animations, models, materials, textures, and lighting system as a paired project while learning rendering basics.',
+                buttonYT:    {
+                    link:'https://youtu.be/iUWEw1ckbLk',
+                    text: 'Watch demo'
+                },
+                buttonGit:    {
+                    link:'https://github.com/GonzaloGNogales/StarWarsIG',
+                    text: 'Visit repository'
+                },
                 smallText: 'Computer Engineering degree'
             }
         ];
@@ -90,18 +180,60 @@ export default class PortfolioData{
                 img:'./imgs/flightBooking.png',
                 title: 'Flight booking page',
                 description: 'Web page consisting of a single HTML element that is dynamically updated with javaScript and uses an "H2" database. The HTML and JS elements were self-developed and Boostrap was used for styling along with a self-developed CSS file.',
+                buttonYT:    {
+                    link:'https://youtu.be/DpAswsdCF_I',
+                    text: 'Watch demo'
+                },
+                smallText: 'Computer Engineering degree'
+            },
+            {
+                img:'./imgs/tictactoe.png',
+                title: 'TicTacToe web',
+                description: 'Implementation of a concurrent website with TicTacToe game ranking and user login.',
+                buttonYT:    {
+                    link:'https://youtu.be/JDrtAqHSx8M',
+                    text: 'Watch demo'
+                },
+                smallText: 'Computer Engineering degree'
+            },
+            {
+                img:'./imgs/artGallery.png',
+                title: 'Art gallery web',
+                description: 'implementation of a static web page with a H2 database.',
+                buttonYT:    {
+                    link:'https://youtu.be/Z5B-TwxgmsQ',
+                    text: 'Watch demo'
+                },
+                smallText: 'Computer Engineering degree'
+            },
+            {
+                img:'./imgs/fortranToC.png',
+                title: 'Fortran to C Language processor',
+                description: 'Language processor that compiles FORTRAN code and converts it to C code, displaying (custom) error messages if present.',
+                buttonGit:    {
+                    link:'https://github.com/Ivancrto/PL',
+                    text: 'Visit repository'
+                },
                 smallText: 'Computer Engineering degree'
             },
             {
                 img:'./imgs/minishell.png',
                 title: 'Minishell',
                 description: 'Basic self-developed minishell. Developed in C, using pipelines.',
+                buttonYT:    {
+                    link:'https://youtu.be/vrNK06AV0gs',
+                    text: 'Watch demo'
+                },
                 smallText: 'Computer Engineering degree'
             },
             {
                 img:'./imgs/cParking.png',
                 title: 'Automatic parking',
-                description: 'Automatic parking developed in C, using pipelines and traffic lights.',
+                description: 'Automatic parking developed in C, using threads.',
+                buttonYT:    {
+                    link:'https://youtu.be/9wUZJnlhsZA',
+                    text: 'Watch demo'
+                },
                 smallText: 'Computer Engineering degree'
             },
             {
@@ -145,13 +277,48 @@ export default class PortfolioData{
         button.addEventListener('click', () => {
             openSectionMenuCareer();
             // Obtener la información del objeto careerData correspondiente al botón clicado
-            const { img, title, description, smallText } = thisCareerData[index];
+            const { img, title, description, buttonYT, buttonGit, smallText } = thisCareerData[index];
 
             // Actualizar el contenido de pcSectionItem con la información correspondiente
             pcSectionItem.querySelector('.progamName').textContent = title;
             pcSectionItem.querySelector('.pcSectionImage').src = img;
             pcSectionItem.querySelector('.card-text').textContent = description;
             pcSectionItem.querySelector('.text-muted').textContent = smallText;
+
+            if(buttonYT){
+                // Crear el botón
+                var btn = document.createElement("button");
+
+                // Establecer el atributo onclick
+                btn.setAttribute("onclick", "window.open(\""+buttonYT.link+"\")");
+
+                // Agregar la clase CSS y el contenido HTML
+                btn.className = "my-button";
+                btn.innerHTML = '<i class="fa fa-youtube"></i> '+buttonYT.text+'';
+
+                var p = document.createElement("p");
+                p.appendChild(btn);
+
+                pcSectionItem.querySelector('.card-text').appendChild(p);
+            }
+
+            if(buttonGit){
+                // Crear el botón
+                var btn = document.createElement("button");
+
+                // Establecer el atributo onclick
+                btn.setAttribute("onclick", "window.open(\""+buttonGit.link+"\")");
+
+                // Agregar la clase CSS y el contenido HTML
+                btn.className = "my-button";
+                btn.innerHTML = '<i class="fab fa-github"></i>'+buttonGit.text+'';
+
+                var p = document.createElement("p");
+                p.appendChild(btn);
+
+                pcSectionItem.querySelector('.card-text').appendChild(p);
+            }
+
         });
         });
 
@@ -240,9 +407,48 @@ export default class PortfolioData{
         });
 
         function updateCGContent() {
-            const currentCG = thisMasterCGData[cgCurrentIndex];
-            masterSectionGC.querySelector('.CGTitle').textContent = currentCG.title;
-            masterSectionGC.querySelector('.CGDescription').textContent = currentCG.description;  
+            const { img, title, description, buttonYT, buttonGit, smallText } = thisMasterCGData[cgCurrentIndex];
+            masterSectionGC.querySelector('.CGTitle').textContent = title;
+            masterSectionGC.querySelector('.CGDescription').textContent = description;  
+            document.getElementById("myImage").src = img;
+
+
+            if(buttonYT){
+                // Crear el botón
+                var btn = document.createElement("button");
+
+                // Establecer el atributo onclick
+                btn.setAttribute("onclick", "window.open(\""+buttonYT.link+"\")");
+
+                // Agregar la clase CSS y el contenido HTML
+                btn.className = "my-button";
+                btn.innerHTML = '<i class="fa fa-youtube"></i> '+buttonYT.text+'';
+
+                var p = document.createElement("p");
+                p.appendChild(btn);
+
+                // Agregar el botón al DOM
+                masterSectionGC.querySelector('.CGDescription').appendChild(p);
+            }
+
+            if(buttonGit){
+                // Crear el botón
+                var btn = document.createElement("button");
+
+                // Establecer el atributo onclick
+                btn.setAttribute("onclick", "window.open(\""+buttonGit.link+"\")");
+
+                // Agregar la clase CSS y el contenido HTML
+                btn.className = "my-button";
+                btn.innerHTML = '<i class="fab fa-github"></i>'+buttonGit.text+'';
+
+                var p = document.createElement("p");
+                p.appendChild(btn);
+
+                // Agregar el botón al DOM
+                masterSectionGC.querySelector('.CGDescription').appendChild(p);
+            }
+
 
         }
 
@@ -395,8 +601,8 @@ export default class PortfolioData{
     loadMasterCGData(){
         const masterCGSectionItem = document.querySelector('#masterSection');
         
-        let sectionHTML = `        
-        <div id="masterSectionGC">
+        let sectionHTML = `       
+        <div id="masterSectionGC">            
             <div class="points">
                 <div class="CGTitle">
                     StarWarsScene
@@ -405,6 +611,7 @@ export default class PortfolioData{
                     Paired project in which a scene was developed in OpenGL with its animations, models, materials and textures and lighting system. 
                     This was the first time learning rendering basics.
                 </div>
+                <img id="myImage" src="./imgs/morphing.gif">
                 <div class="CGButtons">
                     <button id= "CGPrev">
                         prev
